@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service",
+  "info": {
+    "name": "Servicio",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Descripcion": {
+      "type": "richtext",
+      "required": true
+    },
+    "Logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "posts": {
+      "via": "servicio",
+      "collection": "post"
+    },
+    "Sigla": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
