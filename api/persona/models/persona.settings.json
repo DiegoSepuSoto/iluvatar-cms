@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "person",
+  "info": {
+    "name": "Persona",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "Cargo": {
+      "type": "string",
+      "required": true
+    },
+    "Imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Correo": {
+      "type": "email",
+      "required": true
+    },
+    "servicio": {
+      "model": "servicio",
+      "via": "personas"
+    }
+  }
+}

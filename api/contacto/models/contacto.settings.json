@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact",
+  "info": {
+    "name": "Contacto",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tipo": {
+      "type": "enumeration",
+      "enum": [
+        "Web",
+        "Correo",
+        "Facebook",
+        "Twitter",
+        "Instagram",
+        "TikTok"
+      ],
+      "required": true
+    },
+    "Nombre": {
+      "type": "string",
+      "required": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true
+    },
+    "servicio": {
+      "model": "servicio",
+      "via": "contactos"
+    }
+  }
+}

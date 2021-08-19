@@ -39,6 +39,14 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "personas": {
+      "via": "servicio",
+      "collection": "persona"
+    },
+    "contactos": {
+      "via": "servicio",
+      "collection": "contacto"
     }
   }
 }
