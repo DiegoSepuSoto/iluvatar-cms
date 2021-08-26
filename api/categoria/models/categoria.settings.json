@@ -14,6 +14,10 @@
     "Titulo": {
       "type": "string",
       "unique": true
+    },
+    "posts": {
+      "via": "categorias",
+      "collection": "post"
     }
   }
 }

@@ -36,7 +36,9 @@
       "pluginOptions": {}
     },
     "categorias": {
-      "collection": "categoria"
+      "collection": "categoria",
+      "via": "posts",
+      "dominant": true
     },
     "servicio": {
       "via": "posts",
