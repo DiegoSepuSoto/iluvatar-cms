@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "avisos",
+  "info": {
+    "name": "Aviso"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "Cuerpo": {
+      "type": "richtext",
+      "required": true
+    },
+    "servicio": {
+      "model": "servicio",
+      "via": "avisos"
+    }
+  }
+}

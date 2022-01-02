@@ -47,6 +47,10 @@
     "contactos": {
       "via": "servicio",
       "collection": "contacto"
+    },
+    "avisos": {
+      "via": "servicio",
+      "collection": "aviso"
     }
   }
 }
